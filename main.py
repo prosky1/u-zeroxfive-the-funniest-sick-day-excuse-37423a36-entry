@@ -10,14 +10,24 @@ import os
 OUTPUT_PATH = "/output/entry.txt"
 
 EXCUSE = (
-    "My dog ate my car keys, my backup keys, and my will to commute. "
-    "I need a day to negotiate."
+    "The gas station sushi I ate at 2 a.m. has taken my stomach "
+    "hostage, and the ransom is a day off."
 )
+
+# The chosen TOP 1 text is exactly 96 characters; pin that length so any
+# accidental edit to the wording fails fast instead of submitting a
+# different excuse.
+EXPECTED_LENGTH = 96
 
 
 def check_gate(text: str) -> None:
     """Fail loudly unless the text satisfies the competition gate."""
     chars = len(text)
+    if chars != EXPECTED_LENGTH:
+        raise ValueError(
+            f"Excuse is {chars} characters; expected exactly "
+            f"{EXPECTED_LENGTH} (the verified TOP 1 text)."
+        )
     if chars < 1 or chars > 200:
         raise ValueError(f"Excuse is {chars} characters; gate allows 1-200.")
     if not text.strip():

@@ -8,7 +8,7 @@ Entry for [The Funniest Sick-Day Excuse](https://make.fun/bounty/u-zeroxfive-the
 
 ## The entry
 
-> My dog ate my car keys, my backup keys, and my will to commute. I need a day to negotiate.
+> The gas station sushi I ate at 2 a.m. has taken my stomach hostage, and the ransom is a day off.
 
 ## How it works
 
